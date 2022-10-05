@@ -101,7 +101,7 @@ class GestorDeArchivos {
 function crearProfesor(profesor: string, arrayProfesor: Array<Profesor>, arrayAlumnos: Array<Alumno>): void {
 ​
     //transformo el elemento de tipo string en un objeto de tipo Profesor
-    let propiedadProfe = profesor.split(','); //[Juan Perez, 333333333, Karen Simari, 22222222]
+    let propiedadProfe = profesor.split(';'); //[Juan Perez, 333333333; Karen Simari, 22222222]
     let nombre: string = propiedadProfe[0];
     let DNI: number = Number(propiedadProfe[1]);
     let listaAlumnos: Array<Alumno> = arrayAlumnos;
