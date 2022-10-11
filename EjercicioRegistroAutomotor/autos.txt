@@ -1,0 +1,1 @@
+Chevrolet, Corsa, 2014, 120000;Honda,Fit,2007,168000;Ford, Fiesta,2020,32000;Peugeot,308,2021,16000
