@@ -2,6 +2,22 @@ import * as fs from 'fs';
 let readlineSync = require('readline-sync');
 let arrayAutos: Array<Auto> = [];
 ​
+class RegistroAutomotor{
+    private numero: number;
+    private localidad: string;
+    private listaAutos: Array<Auto>;
+
+    public constructor(numero: number, localidad:string, listaAutos: Array<Auto>) {
+        this.numero = numero;
+        this.localidad = localidad;
+        this.listaAutos = listaAutos;
+        
+    }
+
+    public getListaAutos() {
+        return this.listaAutos;
+    }
+}
 class Auto {
     private marca: string;
     private modelo: string;
