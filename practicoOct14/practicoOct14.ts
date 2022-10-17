@@ -1,17 +1,29 @@
 class Animal {
     public name: string;
-    public tipo: string;
-    constructor(name: string, tipo:string) {
+    constructor(name: string) {
       this.name = name;
-      this.tipo = tipo;
     }
     public makeSound(sound:string) {
-      console.log (this.name + " de tipo " + this.tipo + " hace "+ sound);
+      console.log (this.name + " hace "+ sound);
+    }
+   }
+
+   class Dog extends Animal{
+    
+    constructor ( name:string){
+      super (name);
+      }
+   }
+   class Cat extends Animal{
+    
+    constructor ( name:string){
+      super (name);
+      
     }
    }
    
-   let minino: Animal = new Animal('Pocky', "gato");
+   let minino: Animal = new Cat ('Pocky');
    minino.makeSound("meow meow"); // -> meow meow
 
-   let firulais: Animal = new Animal('Pocky', "perro");
+   let firulais: Animal = new Dog ('Firulais');
    firulais.makeSound("wuff wuff"); // -> wuff wuff   
