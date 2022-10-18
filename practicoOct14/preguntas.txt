@@ -1,0 +1,9 @@
+Que es un objeto? Es una instancia de una clase.
+Que es una clase? Es un "molde", una forma de optimizar codigo que permite evitar reiterar codigo creando clases q agrupen metodos y atributos en comun de objetos.-
+A que se llama metodo constructor? El metodo constructor es una propiedad de la clase que permite crear una instancia del metodo en un objeto y/o en una clase hija
+Que son los modificadores de acceso? son propiedades de los atributos de las clases, sirven para proteger, hacer publica, privada o de solo lectura los atributos de la clase
+Que diferencia hay entre uno privado y uno protegido? El privado solo lo ve la clase que lo crea, el protegido las clases hijas. 
+Cuando se usa el this? para hacer referencia en el constructor al atributo que se estahaciendo referencia en el constructor
+Cuando se usa el super? cuando se hace referencua en el constructor a los atributos que se heredan
+A que se llama sub-clase, o clase hija? a aquellas clases que se extienden (heredan) de una clase.
+
