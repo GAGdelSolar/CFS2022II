@@ -1,15 +1,14 @@
-let readlineSync = require('readline-sync');
-let cantidad = readlineSync.questionInt('Ingrese la cantidad: ');
-let precio = readlineSync.questionInt('Ingrese el precio: ');
-let descuento = 0.10;
-let montoMinimo = 1000;
-let total = cantidad*precio;
-
+var readlineSync = require('readline-sync');
+var cantidad = readlineSync.questionInt('Ingrese la cantidad: ');
+var precio = readlineSync.questionInt('Ingrese el precio: ');
+var descuento = 0.10;
+var montoMinimo = 1000;
+var total = cantidad * precio;
 console.log("Su compra total fue de $" + total);
 if (total > montoMinimo) {
     total = total * (1 - descuento);
-    console.log("Como supera los $" + montoMinimo + ", obtiene un descuento del " + 
-descuento*100 + "%.\nEl precio final es de $" + total);
+    console.log("Como supera los $" + montoMinimo + ", obtiene un descuento del " +
+        descuento * 100 + "%.\nEl precio final es de $" + total);
 }
 /*
 //Desarrolle un algoritmo que dados tres n�meros determine cu�l es el mayor de los tres
@@ -28,4 +27,4 @@ if (nro3 > mayor) {
 }
 
 console.log("El numero mas grande ingresado es: " + mayor);
-*/
+*/ 

@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var fs = require("fs");
-// import * as 'readline-sync'
+//   import * as readFileSync from 'readline-sync'
 var Alumno = /** @class */ (function () {
     function Alumno(nombre, nota, DNI) {
         this.nombre = nombre;
@@ -33,6 +33,9 @@ var Profesor = /** @class */ (function () {
     Profesor.prototype.mostrarAlumnos = function () {
         console.log(this.listaAlumnos);
     };
+    Profesor.prototype.setListaAlumnos = function (arreglo) {
+        this.listaAlumnos = arreglo;
+    };
     return Profesor;
 }());
 var Escuela = /** @class */ (function () {
@@ -54,9 +57,9 @@ var Escuela = /** @class */ (function () {
 // creamos un gestor que nos permite leer un archivo de texto
 var GestorDeArchivos = /** @class */ (function () {
     function GestorDeArchivos(txtFileLocation) {
-        var archivoTxt = fs.readFileSync(txtFileLocation, 'utf-8');
+        var archivoTxt = fs.readFileSync(txtFileLocation, 'utf-8'); //esta variable guarda "Juan Perez,333333333;Karen Simari,2222222"
         this.arregloString = archivoTxt.split(';'); //vamos a tener nuestro "objetos" separados por ;
-        //[Juan Perez,333333333,Karen Simari,22222222]
+        //["Juan Perez,333333333","Karen Simari,22222222"]
     }
     GestorDeArchivos.prototype.mostrarArreglo = function () {
         console.log(this.arregloString);
@@ -69,7 +72,7 @@ var GestorDeArchivos = /** @class */ (function () {
 //funcion para crear un nuevo profe
 function crearProfesor(profesor, arrayProfesor, arrayAlumnos) {
     //transformo el elemento de tipo string en un objeto de tipo Profesor
-    var propiedadProfe = profesor.split(';'); //[Juan Perez, 333333333; Karen Simari, 22222222]
+    var propiedadProfe = profesor.split(','); //la variable profesor va a contener --->"Juan Perez,333333333" y profesor.split(',') = ["Juan Perez", "333333333"]
     var nombre = propiedadProfe[0];
     var DNI = Number(propiedadProfe[1]);
     var listaAlumnos = arrayAlumnos;
@@ -89,7 +92,7 @@ function borrarrProfe(arregloProfe, position, arregloAlumnos) {
     // arregloProfe[position] = nuevoProfe;
 }
 //Inicio programa
-var datos = new GestorDeArchivos('profes.txt');
+var datos = new GestorDeArchivos('profes.txt'); // devuelve un arreglo de strings con "elementos" de profesores.
 var arrayProfe = [];
 var alumno1 = new Alumno('Gloria Dominguez', 8, 252546346);
 var alumno2 = new Alumno('Juan Dominguez', 5, 25254255);
@@ -102,3 +105,4 @@ for (var i = 0; i < datos.getArregloString().length; i++) {
     crearProfesor(datos.getArregloString()[i], arrayProfe, arrayAlumnos);
 }
 console.log(arrayProfe);
+arrayProfe[1].mostrarAlumnos();
