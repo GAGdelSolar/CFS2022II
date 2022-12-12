@@ -96,6 +96,7 @@ let pantalla : Pantalla = new Pantalla(42);
 let enchufe : Enchufe = new Enchufe();
 
 let miTV : Tele = new Tele( pantalla,boton, enchufe);
+console.log (miTV);
 
 
 

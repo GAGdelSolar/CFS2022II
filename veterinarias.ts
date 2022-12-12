@@ -1,31 +1,68 @@
 import * as fs from 'fs';
 // import * as 'readline-sync'
-​
-​
-class Alumno {
+
+
+class Veterinaria {
     private nombre: string;
-    private nota: number;
-    private DNI: number;
+    private direccion: string;
+    private ID_Veterinaria:number;
 ​
-    public constructor(nombre: string, nota: number, DNI: number) {
+    public constructor(nombre: string, direccion: string, ID_Veterinaria: number) {
         this.nombre = nombre;
-        this.nota = nota;
-        this.DNI = DNI;
+        this.direccion = direccion;
+        this.ID_Veterinaria = ID_Veterinaria;
     }
-​
-    public getNota() {
-        return this.nota;
-    }
-​
-    public estaAprobado() {
-        if (this.nota < 7) {
-            console.log("El alumno esta desaprobado")
-        } else {
-            console.log("El alumno esta aprobado")
+
+    public getID_Veterinaria() {
+        return this.ID_Veterinaria;
+   
+}
+
+ 
+let arrayProfe: Array <Veterinaria> = [];
+  
+  function crearVeterinaria ( nombre:string,direccion:string,ID:number, arr:Array <Veterinaria>){
+    function random(min: number, max: number) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      
+         
+    ID=random(1, 5);
+    
+    let nuevaVeterinaria : Veterinaria = new Veterinaria(nombre, direccion, ID);
+
+    function cargaID (){
+
+    
+    for ( let i:number=0; i < arr.length;i++) {
+      
+        while (ID=ID [i]){
+            ID=random(1,5);
+
         }
     }
+        
+    arr.push(nuevaVeterinaria);
+    return arr;
 }
-​
+
+  }
+
+  
+  var saludo = ["hi", "hola", "buenos dias", "buen dia"];
+
+  if(saludo.includes("hola"))
+    console.log("Si se encuentra");
+  else
+    console.log("No Se encuentra ");
+
+  crearVeterinaria ("palito", "9 de Julio 871", ID, arrayProfe);
+  crearVeterinaria ("pedri", "9 de Julio 84", ID, arrayProfe);
+  
+  console.log (arrayProfe);
+  
+
+/*
 class Profesor {
     private nombre: string;
     private DNI: number;
@@ -72,7 +109,6 @@ class Escuela {
 }
 ​
 //instalar npm install @types/node
-//npm install @types/node
 // creamos un gestor que nos permite leer un archivo de texto
 ​
 class GestorDeArchivos {
@@ -152,3 +188,9 @@ for (let i: number = 0; i < datos.getArregloString().length; i++) {
 }
 ​
 console.log(arrayProfe);
+
+class Cliente {
+    private nombre: string;
+    get Porfesor.DNI
+}
+*/

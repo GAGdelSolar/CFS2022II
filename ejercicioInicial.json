@@ -1,0 +1,34 @@
+{"mensaje":{
+    "remite":{
+        "nombre": "Alfredo Reino",
+        "email": "alf@ibium.com"
+    },
+    "destinatario":{
+        "nombre": "Bill Clinton",
+        "email": "president@whitehouse.gov"
+    },
+    "asunto":"Hola Bill",
+    
+    "texto":{
+        "parrafo": "Hola, que tal?",
+        "": "..."
+    }
+}
+
+}
+
+1) Explica qué crees que representan los datos y da una breve
+explicación de cómo se organizan.
+
+Segun entiendo es la representacion de un filtro o una busqueda de la imagen "potato".
+Lo organiza en un set de resultados donde informa cuantos registros tiene para buscar y cuantos resultados 
+obtuvo, para luego inicializar un json con los datos del primer resultado, y luego los del segundo.
+
+2) Indica cuántos datos numéricos (number según la
+especificación oficial JSON) se pueden encontrar, en total, en el
+archivo.
+Segun puedo contabilizar hay 4 resultados numericos en todo el codigo (el size de cada imagen,  
+cantidad de resultados retournados y posicion)
+
+
+
